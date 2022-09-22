@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded', function() {
 	timer();
 	
 });
+//Подключение и использование модулей
 
 },{"../parts/ajax.js":2,"../parts/calculator.js":3,"../parts/modal.js":4,"../parts/slider.js":5,"../parts/tab.js":6,"../parts/timer.js":7}],2:[function(require,module,exports){
 function ajax() {
@@ -34,12 +35,12 @@ function ajax() {
 		form.appendChild(statusMessage);
 
 
-		// ajax
+		// Использование сообщений ajax
 
 		let request = new XMLHttpRequest();
 		request.open('POST', 'server.php');
 
-		// Правильная кодировка
+		// Выбор кодировки
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 		let formData = new FormData(form);
@@ -52,7 +53,7 @@ function ajax() {
 				} else if (request.readyState === 4) {
 					if (request.status === 200 && request.status < 300) {
 						statusMessage.innerHTML = message.success;
-						// добавляем контент на страницу
+						// Добавление информации на страницу
 						}
 					} else {
 						statusMessage.innerHTML = message.failure;
@@ -60,17 +61,17 @@ function ajax() {
 		}
 		for (let i = 0; i < input.length; i++) {
 			input[i].value = '';
-			// очистка инпутов
+			// Очистка полей ввода
 		}
 	});
 
 
 
-	// Мой ajax запрос
+	// ajax запрос
 
 	let message2 = new Object();
-	message2.loading = 'Щас пого, загружаю';
-	message2.success = 'Принял, братик, заходи';
+	message2.loading = 'Щас погоди, загружаю';
+	message2.success = 'Принял, заходи';
 	message2.failure = 'Что за чушь ты отправил';
 
 	let form2 = document.getElementById('form');
@@ -107,7 +108,7 @@ function ajax() {
 
 		for (let i = 0; i < input2.length; i++) {
 			input2[i].value = '';
-			// очистка инпутов
+			// очистка полей ввода
 		}
 
 	});
@@ -126,7 +127,7 @@ function calculator() {
 	    	 	  daysSum = 0,
 	    	 	  newPrice = 0;
 	    	 	  price.innerHTML = 0;
-
+				//использование калькулятора сайта
 	    	 	  people.addEventListener('change', function() {
 	    	 	  	peopleSum = +this.value;
 					newPrice = (daysSum + peopleSum) * 4000;
@@ -161,6 +162,7 @@ function calculator() {
 }
 
 module.exports = calculator;
+//Вывод стиля калькулятора на сайте
 },{}],4:[function(require,module,exports){
 function modal() {
 	let btnShadow = document.querySelector('.more');

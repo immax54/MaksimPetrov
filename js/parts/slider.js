@@ -7,7 +7,7 @@ function slider() {
 		 dot = document.getElementsByClassName('dot');
 
 		 showSlider(sliderIndex);
-
+		//Создание слайдера на сайте
 		 function showSlider(now) {
 		 	if (now > sliderItem.length) {
 		 		sliderIndex = 1;
@@ -33,6 +33,7 @@ function slider() {
 		 		showSlider(sliderIndex = now)
 		 };
 
+		//Изменение местоположения слайдера
 		 prevArrow.addEventListener('click', function() {
 		 	nextSlider(-1);
 		 });

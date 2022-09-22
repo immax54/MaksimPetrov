@@ -13,5 +13,5 @@ window.addEventListener('DOMContentLoaded', function() {
 	slider();
 	calculator();
 	timer();
-	
+	//Использование экспорта модулей на сайт
 });

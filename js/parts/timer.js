@@ -1,9 +1,11 @@
-function timer() {
+function timer() { //Функция для вывода таймера на экспорт в другой модуль
+
 	function getTimeRemaining(endtime) {
 	      let t = Date.parse(endtime) - Date.parse(new Date());
 	      let seconds = Math.floor((t / 1000) % 60);
 	      let minutes = Math.floor((t / 1000 / 60) % 60);
 	      let hours = Math.floor((t / (1000 * 60 * 60)));
+//Задание переменных с подсчетом до окончания времяни таймера, по формулам, где t=Секунда*1000 
 	      return {
 	        'total': t,
 	        'hours': hours,
@@ -11,6 +13,8 @@ function timer() {
 	        'seconds': seconds
 	      };
 	    };
+//Функция возвращает JSON файл с данными об окончании таймера: часы, минуты, секунды
+
 	    function setClock(id, endtime) {
 	      let clock = document.getElementById(id);
 	      let hoursText = clock.querySelector('.hours');
@@ -28,12 +32,17 @@ function timer() {
 	          clearInterval(timeinterval);
 	        }
 	      }
+//Функции, которые выводят таймер на фронт сайта  в виде часов, минут, секунд
 
 	      upClock();
 	      let timeinterval = setInterval(upClock, 1000);
 	    }
+
 	    let deadline = new Date('2020-07-23T20:32:00');
 	    setClock('timer', deadline);
+//Настройка функции таймера до определенной даты
 }
 
 module.exports = timer;
+
+//Настройка функции timer() для экспорта модуля

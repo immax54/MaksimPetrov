@@ -14,12 +14,12 @@ function ajax() {
 		form.appendChild(statusMessage);
 
 
-		// ajax
+		// Вывод на страницу информации через запросы
 
 		let request = new XMLHttpRequest();
 		request.open('POST', 'server.php');
 
-		// Правильная кодировка
+		// Выбор кодировки кодировка
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 		let formData = new FormData(form);
@@ -32,7 +32,7 @@ function ajax() {
 				} else if (request.readyState === 4) {
 					if (request.status === 200 && request.status < 300) {
 						statusMessage.innerHTML = message.success;
-						// добавляем контент на страницу
+						// Вывод информации на страницу сайта
 						}
 					} else {
 						statusMessage.innerHTML = message.failure;
@@ -40,30 +40,30 @@ function ajax() {
 		}
 		for (let i = 0; i < input.length; i++) {
 			input[i].value = '';
-			// очистка инпутов
+			// Очитска полей ввода
 		}
 	});
 
 
 
-	// Мой ajax запрос
+	//ajax запрос
 
 	let message2 = new Object();
-	message2.loading = 'Щас пого, загружаю';
-	message2.success = 'Принял, братик, заходи';
-	message2.failure = 'Что за чушь ты отправил';
+	message2.loading = 'Щас погоди, загружаю';
+	message2.success = 'Принял, запрос';
+	message2.failure = 'Не правильный ввод';
 
 	let form2 = document.getElementById('form');
 	let input2 = document.getElementsByTagName('input');
 	let statusMessage2 = document.createElement('p');
 	statusMessage2.style.marginTop = '20px';
 	statusMessage2.style.color = '#fea100';
-
+	//Изменение стиля поля ввода
 	form2.addEventListener('submit', function(e) {
 		e.preventDefault();
 		form2.appendChild(statusMessage2);
 
-		//  My ajax
+		//  ajax запросы на сервер
 		let request2 = new XMLHttpRequest();
 		request2.open('POST', 'server.php');
 		request2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -87,7 +87,7 @@ function ajax() {
 
 		for (let i = 0; i < input2.length; i++) {
 			input2[i].value = '';
-			// очистка инпутов
+			// Очитска полей ввода
 		}
 
 	});

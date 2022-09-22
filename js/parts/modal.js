@@ -3,6 +3,7 @@ function modal() {
 	let overlay = document.querySelector('.overlay');
 	let close = document.querySelector('.popup-close');
 
+	//Изменение анимаций элементов на странице
 	btnShadow.addEventListener('click', function() {
 		this.classList.add('more-splash');
 		overlay.style.display = 'block';

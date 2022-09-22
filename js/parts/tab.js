@@ -2,7 +2,7 @@ function tab() {
 	let tab = document.getElementsByClassName('info-header-tab'),
 	tabContent = document.getElementsByClassName('info-tabcontent'),
 	info = document.getElementsByClassName('info-header')[0];
-
+	//Изменение состояния блоков информации
 	function hideTabCont(act) {
 		for (let i = act; i < tabContent.length; i++) {
 			tabContent[i].classList.remove('show');
