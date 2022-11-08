@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Йога</title>
+	<title>Петров Максим</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -26,7 +26,7 @@
 				<div class="col-12">
 					<div class="main-block">
 						<div class="main-block-link">
-							Portfoliome.ru						
+							Portfoliome.ru
 						</div>
 						<div class="main-block-title">
 							йога-туры в индию
@@ -104,11 +104,11 @@
 					До конца акции осталось
 				</div>
 				<div class="timer-numbers" id="timer">
-					<span class="hours">18</span>
+					<span class="hours">11</span>
 					<span>:</span>
-					<span class="minutes">20</span>
+					<span class="minutes">1</span>
 					<span>:</span>
-					<span class="seconds">11</span>
+					<span class="seconds">23</span>
 				</div>
 			</div>
 			<button class="more"> Узнать больше</button>
@@ -145,11 +145,11 @@
 				</div>
 				<div class="counter-block">
 					<div class="counter-block-option">Количество людей</div>
-					<input type="number" min="1" step="1" class="counter-block-input">
+					<input type="number" min="1" step="1" class="counter-block-input"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
 				</div>
 				<div class="counter-block">
 					<div class="counter-block-option">На сколько дней</div>
-					<input type="number" min="1" step="1" class="counter-block-input">
+					<input type="number" min="1" step="1" class="counter-block-input"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
 				</div>
 				<div class="counter-block">
 					<div class="counter-block-option">Выберете базу</div>
@@ -173,8 +173,8 @@
 						Мы с вами свяжемся
 					</div>
 					<form id="form">
+						<input placeholder="Ваш телефон" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" >
 						<input required type="email" placeholder="Ваша почта">
-						<input required type="tel" placeholder="Ваш телефон">
 						<button type="submit">Отправить</button>
 					</form>
 				</div>
@@ -183,21 +183,6 @@
 		<footer>
 			<div class="container">
 				<div class="social">
-					<div class="social-block">
-						<a href="#">
-						<img src="logo/twitter-logo-silhouette.svg" alt="">
-						</a>
-					</div>
-					<div class="social-block">
-						<a href="#">
-						<img src="logo/facebook-logo.svg" alt="">
-						</a>
-					</div>
-					<div class="social-block">
-						<a href="#">
-						<img src="logo/instagram-social-network-logo-of-photo-camera.svg" alt="">
-						</a>
-					</div>
 					<div class="social-block">
 						<a href="#">
 						<img src="logo/pinterest-logo.svg" alt="">
@@ -213,7 +198,7 @@
 				</div>
 				<div class="popup-title">
 				Форма обратной связи</div>
-					<div class="popup-form">	
+					<div class="popup-form">
 						<form action="#" class="main-form">
 							<div class="popup-form-header">
 								Узнайте больше о своём отдыхе
@@ -221,7 +206,7 @@
 								<label class="popup-form__label" for="phone">
 								Введите ваш номер телефона:
 								</label>
-								<input class="popup-form__input" name="phone" type="tel" required placeholder="+7(978) 973 33 45">
+								<input class="popup-form__input" name="phone" type="tel" required placeholder="79789733345" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
 								<button class="button popup-form__btn">
 									Оставить заявку!
 								</button>
